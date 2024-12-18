@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #A3E635;
+  --secondary-color: #C5B3F9;
+}
+
+:root.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+:root.dark {
+  --bg-primary: #1f2937;
+  --bg-secondary: #111827;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+}
+
+/* Ant Design Component Overrides */
+.ant-btn-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: #94cf2d !important;
+}
+
+.ant-card {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-card-head {
+  border-bottom: none !important;
+  padding: 16px 24px 0 24px !important;
+}
+
+.ant-card-head-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+.ant-layout {
+  background-color: var(--bg-secondary) !important;
+}
+
+.ant-layout-header {
+  background-color: var(--bg-primary) !important;
+}
+
+.ant-input-affix-wrapper {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-input {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.ant-input::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+/* Theme-aware utility classes */
+.bg-primary {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.text-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.border-theme {
+  border-color: var(--border-color) !important;
+}
+
+/* Transitions */
+.ant-switch,
+.ant-card,
+.ant-input-affix-wrapper,
+.ant-layout,
+.ant-layout-header {
+  transition: all 0.2s ease-in-out !important;
+}
